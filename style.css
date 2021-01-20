@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+/* common styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 500;
+}
+/* End of common styles */
+
+html {
+  font-size: 62.5%;
+  background: linear-gradient(to top, rgb(41, 41, 41), bisque);
+}
+
+/*Header*/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+  background-color: #444444;
+}
+
+.header-font {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #997e5e;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #997e5e;
+}
+
+.nav__item {
+  margin-left: 4rem;
+  color: #997e5e;
+}
+/*End of header*/
+/*GENERAL*/
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+/* Section 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 800;
+  color: darkslategrey;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.4rem 0.4rem 0.4rem rgb(0, 0, 0);
+}
+
+.section-subheading {
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgb(0, 0, 0);
+}
+
+.section-1-icons i {
+  font-size: 20rem;
+  color: #997e5e;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: 0.3rem 0.3rem 0.3rem #808080;
+  transition: transform 0.3s;
+}
+
+.section-1-icons .change {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s 0.3s;
+}
+
+.change-text:after {
+  content: '';
+  -webkit-animation-duration: 2s;
+  animation: changetext 8s infinite linear;
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0), 0px 0px 8px rgb(0, 0, 0);
+}
+@keyframes changetext {
+  0% {
+    content: 'cse student';
+  }
+  33% {
+    content: 'Thinker';
+  }
+  66% {
+    content: 'Competitive programmer';
+  }
+  100% {
+    content: 'Web developer';
+  }
+}
+
+/* End of section 1 */
+
+/*Sectiion 2*/
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, bisque, rgb(41, 41, 41));
+  /* background-color: rgb(41, 41, 41); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  height: 35rem;
+  padding: 4rem;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+  transition: transform 0.5s, box-shadow 0.5s;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-4rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+/* 
+.card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #817824;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #8f8317;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+} */
+
+.card-img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: 2rem;
+  font-weight: 900;
+  text: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 2rem 0;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+
+.card-btn {
+  width: 60%;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  border: none;
+  /* padding: 0.5rem 0; */
+  cursor: pointer;
+  box-shadow: -0.05rem -0.05rem 0.05rem rgb(66, 66, 66);
+}
+
+/* End of section 2 */
+
+/* Section 3*/
+.section-3 {
+  background-color: bisque;
+  padding: 5rem 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.project-name {
+  /* position: absolute; */
+  text-align: left;
+  top: 3rem;
+  left: 3rem;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);
+
+  /* position: absolute;
+  top: 3rem; */
+}
+
+.project-description {
+  /* position: relative; */
+  bottom: 3vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 3rem;
+  font-weight: 450;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.links {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(26, 60, 134);
+}
+
+/*End of section 3*/
+
+/*Section 4*/
+.section-4 {
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to top, #222, bisque);
+  /* background-color: bisque; */
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+.copyright {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  list-style-type: none;
+}
+
+.fab {
+  padding: 20px;
+  /* font-size: 10px; */
+  border-radius: 50%;
+  /* height: 14px;
+  width: 14px; */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: #444444;
+}
+
+/* End of section 4*/
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  font-family: Tahoma, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-text {
+  font-size: 3rem;
+  font-weight: 900;
+  position: relative;
+}
+
+/* Modal Window */
